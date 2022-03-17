@@ -1,5 +1,10 @@
 body {
   margin: 0;
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -10,4 +15,80 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+div {
+  display: inline-block;
+}
+
+.card-front-container {
+  grid-area: container;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+#root {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 10fr;
+  grid-template-areas: 
+  "nav"
+  "container"
+  ;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.card-front, .card-back {
+  background-color: green;
+  color: white;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 7px;
+}
+
+.card-front {
+  text-align: center;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 300px;
+}
+
+.card-back {
+  justify-self: center;
+  align-self: center;
+  grid-area: container;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 300px;
+}
+
+a {
+  color: white;
+}
+
+.star-ship-return-card-back {
+  text-decoration: underline;
+}
+
+nav {
+  grid-area: nav;
+  align-self: flex-start;
+  padding: 20px 0;
+  background-color: darkblue;
+  color: white;
+  text-align: center;
+  font-size: 30px;
 }
