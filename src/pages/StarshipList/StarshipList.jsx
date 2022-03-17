@@ -4,8 +4,6 @@ import StarshipCardFront from "../../components/StarshipCardFront";
 import {Link} from 'react-router-dom';
 
 
-//
-
 const StarshipList = (props) => {
 
   const [starships, setStarships] = useState([])
